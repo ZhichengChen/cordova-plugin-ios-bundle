@@ -40,16 +40,17 @@
 
 @end
 
-@interface CDVDevice () {}
+@interface CDVPlugin () {}
 @end
 
-@implementation CDVDevice
+@implementation CDVBundle
 
 - (void)getDeviceInfo:(CDVInvokedUrlCommand*)command
 {
     NSDictionary* deviceProperties = [self deviceProperties];
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:deviceProperties];
 
+    NSLog(@"Hello, World!--- \n");
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
@@ -57,7 +58,8 @@
 {
     NSMutableDictionary* devProps = [NSMutableDictionary dictionaryWithCapacity:4];
 
-    [devProps setObject:@"bundle" forKey:[[NSBundle mainBundle] bundleIdentifier]];
+//    [devProps setObject:@"bundleId" forKey:[[NSBundle mainBundle] bundleIdentifier]];
+    [devProps setObject:@"bundleId" forKey:@"qq"];
 
     NSDictionary* devReturn = [NSDictionary dictionaryWithDictionary:devProps];
     return devReturn;

@@ -61,8 +61,8 @@ function Bundle() {
  * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
  */
 Bundle.prototype.getInfo = function(successCallback, errorCallback) {
-    argscheck.checkArgs('fF', 'Device.getInfo', arguments);
-    exec(successCallback, errorCallback, "Device", "getDeviceInfo", []);
+    argscheck.checkArgs('fF', 'Bundle.getInfo', arguments);
+    exec(successCallback, errorCallback, "Bundle", "getDeviceInfo", []);
 };
 
 module.exports = new Bundle();

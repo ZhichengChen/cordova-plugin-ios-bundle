@@ -18,9 +18,9 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <Cordova/CDVBundle.h>
+#import <Cordova/CDVPlugin.h>
 
-@interface CDVBundle : CDVBundle
+@interface CDVBundle:CDVPlugin
 {}
 
 + (NSString*)cordovaVersion;
