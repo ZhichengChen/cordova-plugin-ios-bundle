@@ -21,7 +21,7 @@
 #include <sys/sysctl.h>
 
 #import <Cordova/CDV.h>
-#import "CDVDevice.h"
+#import "CDVBundle.h"
 
 @implementation UIDevice (ModelVersion)
 

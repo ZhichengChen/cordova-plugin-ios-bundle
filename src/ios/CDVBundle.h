@@ -18,7 +18,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDVBundle.h>
 
 @interface CDVBundle : CDVBundle
 {}
